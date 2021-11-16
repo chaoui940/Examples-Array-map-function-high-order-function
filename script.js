@@ -70,3 +70,17 @@ let things = theNumbers.map((value , index)=> {
 	}
 })
 console.log(things)
+
+////
+let starter = [2, 5, 10];
+// Create a new array with each value multiplied by the next value
+// The last value should be multiplied by the first value
+// e.g. [2*5, 5*10, 10*2] == [10, 50, 20]
+ let multiplied = starter.map((number, index)=> {
+ 	let nextindex = index + 1 ;
+ 	if (index==starter.length -1 ) {
+ 		nextindex = 0
+ 	}
+ 	return number * starter[nextindex];
+ });
+ console.log(multiplied);
