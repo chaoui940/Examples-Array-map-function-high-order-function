@@ -36,3 +36,24 @@ let fullNames = people.map((person) => {
 	return person.first_name +' '+ person.last_name ;
 });
 console.log(fullNames);
+
+//
+let animals = [{
+  'name': 'cat',
+  'size': 'small'
+}, {
+  'name': 'dog',
+  'size': 'small'
+}, {
+  'name': 'lion',
+  'size': 'medium'
+}, {
+  'name': 'elephant',
+  'size': 'big'
+}];
+// Create a new array with just the names of the animals
+
+let names = animals.map((cats)=> {
+	return cats.name 
+})
+console.log(names);
