@@ -33,6 +33,6 @@ let people = [{
 // create new array with the string full name of each person
 
 let fullNames = people.map((person) => {
-	return person.first_name , person.last_name ;
+	return person.first_name +' '+ person.last_name ;
 });
 console.log(fullNames);
