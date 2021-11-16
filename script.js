@@ -57,3 +57,16 @@ let names = animals.map((cats)=> {
 	return cats.name 
 })
 console.log(names);
+
+//
+
+let theNumbers = [4, 8, 15, 16, 23, 42];
+// create a new array of objects with the properties value and index
+
+let things = theNumbers.map((value , index)=> {
+	return {
+		value ,
+		index
+	}
+})
+console.log(things)
