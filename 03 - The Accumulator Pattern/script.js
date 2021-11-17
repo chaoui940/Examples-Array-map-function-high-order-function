@@ -50,11 +50,17 @@ let all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 let evenNumbers = []; // 1. Initialize accumulator variable
 
 // 2. Iterate over an array
-for (let i = 0; i < all_numbers.length; i++) {
-  const number = all_numbers[i];
-  if (number % 2 === 0) {
-    evenNumbers.push(number); // 3. Update the accumulator variable
-  }
-}
+//for (let i = 0; i < all_numbers.length; i++) {
+  //const number = all_numbers[i];
+  //if (number % 2 === 0) {
+   // evenNumbers.push(number); // 3. Update the accumulator variable
+  //}
+//}
 
+all_numbers.forEach(number => {
+
+  if (number % 2 === 0 ) {evenNumbers.push(number);} 
+  }
+  
+  )
 console.log(evenNumbers);
