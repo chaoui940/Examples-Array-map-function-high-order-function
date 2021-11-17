@@ -46,7 +46,7 @@ console.log(doubledNumbers);
 
 // 4 - Re-write the for loop with a forEach
 
-let all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10 , 16];
 let evenNumbers = []; // 1. Initialize accumulator variable
 
 // 2. Iterate over an array
