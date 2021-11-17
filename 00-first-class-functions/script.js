@@ -20,8 +20,17 @@ greet(getName, 'Hello.. this is another');
 // makeAdder should return a function that takes in 1 parameter:
 // other_number - any valid number
 // The returned function should return the sum of the two numbers
-
+function makeAdder (number) {
+	return (other_number) => {
+		return number + other_number ;
+	}
+}
 
 
 // 04 - Use your makeAdder function to create a function that adds 10 to a number
 // Invoke your function several times with different numbers, log the result
+
+let tenAdder = makeAdder(10);
+
+console.log(tenAdder(2));
+console.log(tenAdder(20));
