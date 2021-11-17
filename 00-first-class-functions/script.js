@@ -12,7 +12,8 @@ function getName() {
 function greet (getNameFn , greeting) {
 	console.log(greeting,getNameFn())
 }
-greet(getName,'Hello People')
+greet(getName,'Hello People');
+greet(getName, 'Hello.. this is another');
 
 // 03 - Define a function called makeAdder that takes in 1 parameter:
 // number - any valid number
