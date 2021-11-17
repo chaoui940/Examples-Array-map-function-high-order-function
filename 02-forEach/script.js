@@ -20,6 +20,7 @@ let numbers = [2, 4, 6, 8];
 //console.log('The number', numbers[i], 'is at index', i);
 //}
 
+//my solution simply is : 
 numbers.forEach((number,index) => {
 
   console.log( 'the number is '+ number + ' and there index is '+ index)
