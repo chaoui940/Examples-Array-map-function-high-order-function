@@ -34,3 +34,8 @@ let tenAdder = makeAdder(10);
 
 console.log(tenAdder(2));
 console.log(tenAdder(20));
+
+let tweAdder = makeAdder(20);
+
+console.log(tweAdder(2));
+console.log(tweAdder(20));
