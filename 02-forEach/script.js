@@ -30,11 +30,16 @@ numbers.forEach((number,index) => {
 
 let evenNumbers = [2, 4, 6, 8, 10];
 
-for (let i = 0; i < evenNumbers.length; i++) {
-  evenNumbers[i] = evenNumbers[i] * 2;
-}
+//for (let i = 0; i < evenNumbers.length; i++) {
+  //evenNumbers[i] = evenNumbers[i] * 2;
+//}
 
-console.log(evenNumbers);
+//console.log(evenNumbers);
+
+evenNumbers.forEach( (even,index)=>  {
+  console.log('the number ' + even +' is at index '+ index + 'multiplying by 2 = ' )
+  console.log(even*2);
+})
 
 // 04 - Log the name of each product to the page with a forEach call on the products array
 
@@ -54,3 +59,12 @@ let products = [{
   name: 'Sandals',
   price: 55
 }];
+
+products.forEach( product => 
+{ 
+  console.log('the product name is '+product.name+' and its price is '+product.price + '$')
+
+})
+
+// another way to write syntax above products.forEach( product => console.log('the product name is '+product.name+' and its price is '+product.price + '$'))
+
