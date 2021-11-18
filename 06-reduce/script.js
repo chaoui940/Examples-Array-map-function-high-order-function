@@ -30,7 +30,7 @@ let avergePrice = prices.reduce((average , price, index , array)=>{
   return average + price / array.length
 },0)
 console.log(avergePrice)
-
+//////
 const days = [
   'Sunday',
   'Monday',
@@ -41,9 +41,27 @@ const days = [
   'Saturday'
 ];
 // create a new array with the first 3 letters of each day
+let shortDay = days.reduce((shorten,day)=> {
+  let firstThree = day.substring(0,3)
+  shorten.push(firstThree)
+  return shorten
+},[])
+console.log(shortDay)
 
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 // create a new array with only the words with a length longer than 6
+
+let longWords = words.reduce((longer,word)=>
+    {
+      if (word.length > 6 ) {
+        longer.push(word)
+      }
+      return longer
+    }
+  ,[])
+console.log(longWords)
+
+////
 
 const people = [{
   id: 1,
@@ -64,6 +82,15 @@ const people = [{
 }];
 // Create an object where the keys are the id and the values are the people
 
+let Persons=people.reduce((byId, person)=>{
+      byId[person.id] = person
+      return byId
+          }
+  ,{})
+console.log(Persons)
+
+////
+
 const animals = [{
   name: 'cat',
   size: 'small'
@@ -78,3 +105,14 @@ const animals = [{
   size: 'big'
 }];
 // Create an object where the keys are the size and the values are an array of all animals that size
+
+let animalBysize= animals.reduce((BySize,animal)=>{
+  if (!BySize.hasOwnProperty(animal.size)){
+   BySize[animal.size]= [];
+  }
+
+  BySize[animal.size].push(animal);
+
+  return BySize
+},{})
+console.log(animalBysize)
