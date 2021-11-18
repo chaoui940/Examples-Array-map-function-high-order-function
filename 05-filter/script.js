@@ -20,6 +20,8 @@ let Tdays= days.filter(T=> {
   return T[0] === 'T' 
 })
 console.log(Tdays)
+
+/////
 const people = [{
   first_name: 'CJ',
   last_name: 'R.'
@@ -35,6 +37,13 @@ const people = [{
 }];
 // Create a new array with only the people who's first name is less than 4 characters long.
 
+let ShortNames = people.filter(person => {
+  return person.first_name.length <= 4 ;
+
+})
+
+console.log(ShortNames)
+///////
 const animals = [{
   name: 'cat',
   size: 'small'
@@ -49,6 +58,17 @@ const animals = [{
   size: 'big'
 }];
 // Create a new array with only the animals of size small
+let smallAnimals = animals.filter(smallpets=> {
+  return smallpets.size === 'small' 
+})
+console.log(smallAnimals)
 
+////
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 // create a new array with only the words with a length longer than 6
+
+let longWord = words.filter(long => {
+  return long.length > 6 
+})
+
+console.log(longWord)
