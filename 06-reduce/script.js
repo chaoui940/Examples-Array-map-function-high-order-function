@@ -26,6 +26,11 @@ const prices = [29.76, 41.85, 46.5];
 // Create a number that is the average price of all the prices in the array
 // HINT: you will need to check the index to determine if you should return the sum or the average
 
+let avergePrice = prices.reduce((average , price, index , array)=>{
+  return average + price / array.length
+},0)
+console.log(avergePrice)
+
 const days = [
   'Sunday',
   'Monday',
