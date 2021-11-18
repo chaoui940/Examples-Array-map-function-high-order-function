@@ -9,7 +9,17 @@ console.log(sum)
 
 const fruits = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig'];
 // Create an object with the fruit as a key and the number of occurences of that fruit as a value
+let fruitSightings = fruits.reduce((fruitStock , fruit)=> {
 
+  if (fruitStock.hasOwnProperty(fruit)) {
+    fruitStock[fruit]++;
+  }
+    else {
+       fruitStock[fruit]=1;
+    }
+    return fruitStock;
+},{})
+console.log(fruitSightings)
 
 
 const prices = [29.76, 41.85, 46.5];
