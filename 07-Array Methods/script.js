@@ -23,7 +23,10 @@ const orders = [
 // Exercises
 
 // 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
-
+let NotDelivered = orders.filter(order => {
+  order.customerId === '234' && !order.delivered
+})
+console.log(NotDelivered)
 
 // 2) Create a new property on each order with the total price of items ordered.
 
