@@ -29,6 +29,9 @@ let NotDelivered = orders.filter(order => {
 console.log(NotDelivered)
 
 // 2) Create a new property on each order with the total price of items ordered.
+let NewProperty= orders.map(order => ({
+    ...order,orderTotal:
+}))
 
 
 // 3) Have all the orders been delivered?
