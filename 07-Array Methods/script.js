@@ -33,6 +33,7 @@ let NewProperty= orders.map(order => ({
     ...order,orderTotal: order.items.reduce((acc,item)=>
     acc+item.price,0)
 }))
+console.log(NewProperty)
 
 
 // 3) Have all the orders been delivered?
