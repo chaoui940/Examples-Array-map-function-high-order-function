@@ -30,7 +30,8 @@ console.log(NotDelivered)
 
 // 2) Create a new property on each order with the total price of items ordered.
 let NewProperty= orders.map(order => ({
-    ...order,orderTotal:
+    ...order,orderTotal: order.items.reduce((acc,item)=>
+    acc+item.price,0)
 }))
 
 
