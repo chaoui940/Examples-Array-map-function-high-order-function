@@ -42,6 +42,9 @@ console.log(allOrders)
 
 
 // 4) Has the customer with ID '123' made any orders?
-
+let customOrder= orders.some(order => order.customerId ==='123')
+console.log( customOrder)
 
 // 5) Have any products with an id of 123 been sold?
+let productSold= orders.reduce((acc, order)=> acc+order.items.reduce((acc,item)=>acc+(item.productId=='123'),0),0);
+console.log(productSold)
