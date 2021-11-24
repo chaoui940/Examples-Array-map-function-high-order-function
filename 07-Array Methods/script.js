@@ -37,6 +37,8 @@ console.log(NewProperty)
 
 
 // 3) Have all the orders been delivered?
+let allOrders= orders.evry(order =>order.delivered)
+console.log(allOrders)
 
 
 // 4) Has the customer with ID '123' made any orders?
