@@ -1,86 +1,47 @@
-let days = [ 
-		'Saturday' ,
-		'Sunday' ,
-		'Monday' ,
-		'Tuesday' ,
-		'Wensday' ,
-		'Thursday' , 
-		'Friday' 
-] ; 
-// create an array with just 3 letters of previous array
+const users = [
+    { id: '88f24bea-3825-4237-a0d1-efb6b92d37a4', firstName: 'Sam', lastName: 'Hughes' },
+    { id: '2a35032d-e02b-4508-b3b5-6393aff75a53', firstName: 'Terri', lastName: 'Bishop' },
+    { id: '7f053852-7440-4e44-838c-ddac24611050', firstName: 'Jar', lastName: 'Burke' },
+    { id: 'd456e3af-596a-4224-b1dc-dd990a34c9cf', firstName: 'Julio', lastName: 'Miller' },
+    { id: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', firstName: 'Chester', lastName: 'Flores' },
+    { id: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', firstName: 'Madison', lastName: 'Marshall' },
+    { id: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', firstName: 'Ava', lastName: 'Pena' },
+    { id: '7f0ce45a-bdca-4067-968b-d908e79276ce', firstName: 'Gabriella', lastName: 'Steward' },
+    { id: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', firstName: 'Charles', lastName: 'Campbell' },
+    { id: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', firstName: 'Madison', lastName: 'Lambert' },
+];
 
-let abv = days.map((days)=> {
-	return days.substring(0 , 3);
-})
+const comments = [
+    { userId: '88f24bea-3825-4237-a0d1-efb6b92d37a4', text: 'Great Job!' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'Well done, I think I understand now!' },
+    { userId: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', text: 'How do you do that? 😲' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'OK great thanks' },
+    { userId: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', text: 'Cool, thanks!' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Nice one 😉' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Got it.' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Thanks!' },
+    { userId: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', text: 'Cool 😀' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Great stuff!' },
+];
 
-console.log(abv)
 
-// 
-let people = [{
-	first_name: "Riche",
-	last_name: "Aboubaker"
-},
-{
-	first_name: 'KADD',
-	last_name: 'Missinsn'
-},
-{
-	first_name: 'laala',
-	last_name: 'Jason'
-},
-]
+// Exercises
 
-// create new array with the string full name of each person
 
-let fullNames = people.map((person) => {
-	return person.first_name +' '+ person.last_name ;
-});
-console.log(fullNames);
+// 1) What is Madison Marshall's user id?
 
-//
-let animals = [{
-  'name': 'cat',
-  'size': 'small'
-}, {
-  'name': 'dog',
-  'size': 'small'
-}, {
-  'name': 'lion',
-  'size': 'medium'
-}, {
-  'name': 'elephant',
-  'size': 'big'
-}];
-// Create a new array with just the names of the animals
 
-let names = animals.map((cats)=> {
-	return cats.name 
-})
-console.log(names);
 
-//
+// 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
 
-let theNumbers = [4, 8, 15, 16, 23, 42];
-// create a new array of objects with the properties value and index
 
-let things = theNumbers.map((value , index)=> {
-	return {
-		value ,
-		index
-	}
-})
-console.log(things)
 
-////
-let starter = [2, 5, 10];
-// Create a new array with each value multiplied by the next value
-// The last value should be multiplied by the first value
-// e.g. [2*5, 5*10, 10*2] == [10, 50, 20]
- let multiplied = starter.map((number, index)=> {
- 	let nextindex = index + 1 ;
- 	if (index==starter.length -1 ) {
- 		nextindex = 0
- 	}
- 	return number * starter[nextindex];
- });
- console.log(multiplied);
+// 3) Which user commented 'OK great thanks'?
+
+
+
+// 4) Add the user's first and last name to each comment in the comments array
+
+
+
+// 5) Get a list of the users who haven't commented
