@@ -32,13 +32,13 @@ const comments = [
 
 
 let FindMadison = users.find( user=> 
-user.firstName == 'Madison' && user.lastName == 'Marshall'
-)
-
+user.firstName == 'Madison' && user.lastName == 'Marshall')
 console.log(FindMadison)
 
 // 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
-
+let PersonIndex = users.find(user =>
+ user.id=comments[0].userId)
+console.log(PersonIndex)
 
 
 // 3) Which user commented 'OK great thanks'?
