@@ -47,6 +47,12 @@ let user = users.find(u => u.id == comments.find(c => c.text == 'OK great thanks
 console.log(user)
 // 4) Add the user's first and last name to each comment in the comments array
 
+let AddlastFirst=users.forEach((c) => {
+    user = users.find( u => u.id == c.userId);
+    c.userFirstName = user.firstName;
+    c.userLastName = user.lastName;
+})
 
+console.log(AddlastFirst)
 
 // 5) Get a list of the users who haven't commented
