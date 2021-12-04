@@ -1,50 +1,52 @@
-const orders = [
-  { orderId: '123', customerId: '123', deliveryDate: '01-01-2020', delivered: true, items: [
-      { productId: '123', price: 55 },
-      { productId: '234', price: 30 },
-  ]},
-  { orderId: '234', customerId: '234', deliveryDate: '01-02-2020', delivered: false, items: [
-      { productId: '234', price: 30 },
-  ]},
-  { orderId: '345', customerId: '234', deliveryDate: '05-01-2020', delivered: true, items: [
-      { productId: '567', price: 30 },
-      { productId: '678', price: 80 },
-  ]},
-  { orderId: '456', customerId: '345', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '789', price: 12 },
-      { productId: '890', price: 90 },
-  ]},
-      { orderId: '578', customerId: '456', deliveryDate: '12-01-2020', delivered: true, items: [
-      { productId: '901', price: 43 },
-      { productId: '123', price: 55 },
-  ]},
+const users = [
+    { id: '88f24bea-3825-4237-a0d1-efb6b92d37a4', firstName: 'Sam', lastName: 'Hughes' },
+    { id: '2a35032d-e02b-4508-b3b5-6393aff75a53', firstName: 'Terri', lastName: 'Bishop' },
+    { id: '7f053852-7440-4e44-838c-ddac24611050', firstName: 'Jar', lastName: 'Burke' },
+    { id: 'd456e3af-596a-4224-b1dc-dd990a34c9cf', firstName: 'Julio', lastName: 'Miller' },
+    { id: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', firstName: 'Chester', lastName: 'Flores' },
+    { id: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', firstName: 'Madison', lastName: 'Marshall' },
+    { id: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', firstName: 'Ava', lastName: 'Pena' },
+    { id: '7f0ce45a-bdca-4067-968b-d908e79276ce', firstName: 'Gabriella', lastName: 'Steward' },
+    { id: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', firstName: 'Charles', lastName: 'Campbell' },
+    { id: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', firstName: 'Madison', lastName: 'Lambert' },
 ];
+
+const comments = [
+    { userId: '88f24bea-3825-4237-a0d1-efb6b92d37a4', text: 'Great Job!' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'Well done, I think I understand now!' },
+    { userId: 'e789565f-fa5a-4d5e-8f6c-dd126cf995be', text: 'How do you do that? 😲' },
+    { userId: '7f053852-7440-4e44-838c-ddac24611050', text: 'OK great thanks' },
+    { userId: 'b4a306cb-8b95-4f85-b9f8-434dbe010985', text: 'Cool, thanks!' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Nice one 😉' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Got it.' },
+    { userId: '9e525c2d-6fcd-4d88-9ac4-a44eaf3a43e6', text: 'Thanks!' },
+    { userId: '58a1e37b-4b15-47c1-b95b-11fe016f7b64', text: 'Cool 😀' },
+    { userId: '6ee904be-e3b0-41c9-b7a2-5a0233c38e4c', text: 'Great stuff!' },
+];
+
 
 // Exercises
 
-// 1) Get a list of the orders for the customer with the ID 234 that have not been delivered.
-let NotDelivered = orders.filter(order => {
-  order.customerId === '234' && !order.delivered
-})
-console.log(NotDelivered)
 
-// 2) Create a new property on each order with the total price of items ordered.
-let NewProperty= orders.map(order => ({
-    ...order,orderTotal: order.items.reduce((acc,item)=>
-    acc+item.price,0)
-}))
-console.log(NewProperty)
+// 1) What is Madison Marshall's user id?
 
 
-// 3) Have all the orders been delivered?
-let allOrders= orders.evry(order =>order.delivered)
-console.log(allOrders)
+let FindMadison = users.find( user=> 
+user.firstName == 'Madison' && user.lastName == 'Marshall'
+)
+
+console.log(FindMadison)
+
+// 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
 
 
-// 4) Has the customer with ID '123' made any orders?
-let customOrder= orders.some(order => order.customerId ==='123')
-console.log( customOrder)
 
-// 5) Have any products with an id of 123 been sold?
-let productSold= orders.reduce((acc, order)=> acc+order.items.reduce((acc,item)=>acc+(item.productId=='123'),0),0);
-console.log(productSold)
+// 3) Which user commented 'OK great thanks'?
+
+
+
+// 4) Add the user's first and last name to each comment in the comments array
+
+
+
+// 5) Get a list of the users who haven't commented

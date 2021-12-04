@@ -30,7 +30,12 @@ const comments = [
 
 // 1) What is Madison Marshall's user id?
 
+let FindPerson=users ; 
+FindPerson.find(user=> {
+user.firstName === 'Madison'
+})
 
+console.log(FindPerson)
 
 // 2) Who wrote the first comment (assuming the first comment is in position 0 of the comments array)
 
