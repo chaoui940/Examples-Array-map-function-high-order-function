@@ -43,8 +43,8 @@ console.log(PersonIndex)
 
 // 3) Which user commented 'OK great thanks'?
 
-
-
+let user = users.find(u => u.id == comments.find(c => c.text == 'OK great thanks').userId);
+console.log(user)
 // 4) Add the user's first and last name to each comment in the comments array
 
 
